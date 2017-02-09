@@ -55,7 +55,7 @@ app.post('/messenger_chatbot', (req, res) => {
 function sendMessage(event) {
     let sender = event.sender.id;
     let userInputText = event.message.text;
-    let response = greeting.random() + '! ' + randomFact.get() + '? ';
+    let response = greeting.random() + '! ' + randomFact.get() + '';
 
     console.log('*** RECEIVED ***');
     console.log(event);
