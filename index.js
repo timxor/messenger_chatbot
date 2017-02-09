@@ -25,7 +25,6 @@ app.get('/', function (req, res) {
     res.send("Hello from /. ");
 })
 
-
 // page https://www.facebook.com/Comedy-Bot-144000482774878/
 // app https://developers.facebook.com/apps/1342241162503801/messenger/
 /* For Facebook Validation */
