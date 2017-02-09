@@ -16,7 +16,6 @@ const PAGE_ACCESS_TOKEN = process.env.PAGE_ACCESS_TOKEN;
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-
 const server = app.listen(port, () => {
     console.log('Expressheroku l server listening on port %d in %s mode', server.address().port, app.settings.env);
     open('http://127.0.0.1:5000');
