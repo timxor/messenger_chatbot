@@ -61,7 +61,6 @@ function sendMessage(event) {
     console.log(event);
     console.log("user input:   ", userInputText);
 
-
     request({
         url: 'https://graph.facebook.com/v2.6/me/messages',
         qs: {access_token: PAGE_ACCESS_TOKEN},
