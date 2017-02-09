@@ -2,6 +2,7 @@
 const bodyParser = require('body-parser');
 const request = require('request');
 const botBuilder = require('claudia-bot-builder');
+var path    = require("path");
 var express = require('express')
 var app = express();
 var open = require('open');
@@ -29,7 +30,7 @@ app.get('/messenger_chatbot', (req, res) => {
   if (req.query['hub.mode'] && req.query['hub.verify_token'] === 'comedybot') {
     res.status(200).send(req.query['hub.challenge']);
   } else {
-      res.send("Hello from 403 status.");
+      res.send("Hello from  /messenger_chatbot/ 403 status.");
       res.status(403).end();
   }
 });
@@ -72,3 +73,8 @@ function sendMessage(event) {
         }
     });
 }
+
+
+app.get('/ula', (req, res) => {
+    res.sendFile(path.join(__dirname+'/ula.html'));
+});
