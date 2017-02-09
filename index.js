@@ -5,6 +5,7 @@ const botBuilder = require('claudia-bot-builder');
 var path    = require("path");
 var greeting = require('greeting');
 var randomFact = require('huh');
+var port = process.env.PORT || 8000;
 
 var express = require('express');
 var app = express();
@@ -16,7 +17,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 
-const server = app.listen(process.env.PORT || 5000, () => {
+const server = app.listen(port, () => {
     console.log('Expressheroku l server listening on port %d in %s mode', server.address().port, app.settings.env);
     open('http://127.0.0.1:5000');
 });
