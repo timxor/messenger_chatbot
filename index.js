@@ -3,7 +3,10 @@ const bodyParser = require('body-parser');
 const request = require('request');
 const botBuilder = require('claudia-bot-builder');
 var path    = require("path");
-var express = require('express')
+var greeting = require('greeting');
+var randomFact = require('huh');
+
+var express = require('express');
 var app = express();
 var open = require('open');
 var dotenv = require('dotenv').load();
@@ -53,6 +56,7 @@ app.post('/messenger_chatbot', (req, res) => {
 function sendMessage(event) {
     let sender = event.sender.id;
     let text = event.message.text;
+    let response = greeting.random() + '! ' + randomFact.get();
 
     console.log('*** RECEIVED ***');
     console.log(event);
@@ -63,7 +67,7 @@ function sendMessage(event) {
         method: 'POST',
         json: {
             recipient: {id: sender},
-            message: {text: text}
+            message: {text: response}
         }
     }, function (error, response) {
         if (error) {
@@ -73,7 +77,6 @@ function sendMessage(event) {
         }
     });
 }
-
 
 app.get('/ula', (req, res) => {
     res.sendFile(path.join(__dirname+'/ula.html'));
