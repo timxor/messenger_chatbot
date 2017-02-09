@@ -23,7 +23,6 @@ npm-debug.log
 .DS_Store
 /*.envnode_modules
 /.idea
-.env
 .DS_Store
 node_modules
 npm-debug.log
