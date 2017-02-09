@@ -1,5 +1,4 @@
 'use strict';
-const PAGE_ACCESS_TOKEN = env.PAGE_ACCESS_TOKEN;
 const bodyParser = require('body-parser');
 const request = require('request');
 const botBuilder = require('claudia-bot-builder');
@@ -7,6 +6,7 @@ var express = require('express')
 var app = express();
 var open = require('open');
 var dotenv = require('dotenv').load();
+const PAGE_ACCESS_TOKEN = process.env.PAGE_ACCESS_TOKEN;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
