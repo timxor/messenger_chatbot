@@ -54,11 +54,13 @@ app.post('/messenger_chatbot', (req, res) => {
 
 function sendMessage(event) {
     let sender = event.sender.id;
-    let text = event.message.text;
-    let response = greeting.random() + '! ' + randomFact.get();
+    let userInputText = event.message.text;
+    let response = greeting.random() + '! ' + randomFact.get() + '? ';
 
     console.log('*** RECEIVED ***');
     console.log(event);
+    console.log("user input:   ", userInputText);
+
 
     request({
         url: 'https://graph.facebook.com/v2.6/me/messages',
