@@ -2,11 +2,9 @@
   "name": "comedybot",
   "version": "1.0.0",
   "description": "A facebook messenger chatbot",
-  "main": "bot.js",
+  "main": "index.js",
   "scripts": {
-    "deploy": "claudia create --handler lambda.handler --deploy-proxy-api --region us-west-1",
-    "update": "claudia update",
-    "generate-proxy": "claudia generate-serverless-express-proxy --express-module app"
+    "start": "node index.js"
   },
   "author": "",
   "license": "ISC",
@@ -26,10 +24,10 @@
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tcsiwula/messenger_chatbot.git"
+    "url": "git+https://github.com/tcsiwula/ten-x-chatbot.git"
   },
   "bugs": {
-    "url": "https://github.com/tcsiwula/messenger_chatbot/issues"
+    "url": "https://github.com/tcsiwula/ten-x-chatbot/issues"
   },
-  "homepage": "https://github.com/tcsiwula/messenger_chatbot#readme"
+  "homepage": "https://github.com/tcsiwula/ten-x-chatbot#readme"
 }
