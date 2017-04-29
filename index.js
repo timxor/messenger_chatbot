@@ -68,7 +68,7 @@ function sendMessage(event) {
         json: {
             recipient: {id: sender},
             message: {text: response},
-            "sender_action":"typing_on"
+            sender_action: {text: "typing_on"}
         }
     }, function (error, response) {
         if (error) {
