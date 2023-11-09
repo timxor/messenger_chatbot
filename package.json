@@ -19,9 +19,8 @@
     "open": "^6.0.0",
     "path": "^0.12.7",
     "request": "^2.79.0",
-    "require": "^2.4.20"
+    "require": "^0.4.4"
   },
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tcsiwula/ten-x-chatbot.git"
